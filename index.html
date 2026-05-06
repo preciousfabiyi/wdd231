@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- REQUIRED META -->
+  <meta name="description" content="Personal homepage showcasing web development progress and course work.">
+  <meta name="author" content="Precious Fabiyi">
+
+  <title>Web and Computer Programming Certificate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Site Logo" class="logo">
+  <span>Precious Fabiyi</span>
+
+  <!-- Hamburger -->
+  <button id="menuBtn">☰</button>
+
+  <nav id="navMenu">
+    <a href="#">Home</a>
+    <a href="chamber/index.html">Chamber</a>
+    <a href="project/index.html">Final</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Home</h1>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am a web development student passionate about building modern and responsive websites and I also enjoy learning new technologies.</p>
+  </section>
+
+  <section>
+    <h2>Courses</h2>
+
+    <div class="buttons">
+      <button id="allBtn">All</button>
+      <button id="wddBtn">WDD</button>
+      <button id="cseBtn">CSE</button>
+    </div>
+
+    <div id="courseList"></div>
+    <p id="totalCredits"></p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p>Explore my latest work including chamber and final projects.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="socials">
+    <a href="https://github.com/">GitHub</a>
+    <a href="https://linkedin.com/">LinkedIn</a>
+  </div>
+
+  <p>
+    © <span id="year"></span> | Precious Fabiyi | Nigeria
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
