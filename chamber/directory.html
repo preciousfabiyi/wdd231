@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lagos Chamber of Commerce Directory</title>
+
+    <meta name="description" content="Business directory for the Lagos Chamber of Commerce featuring local businesses and organizations.">
+
+    <meta name="author" content="Your Full Name">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Lagos Chamber of Commerce">
+    <meta property="og:description" content="Explore trusted businesses and organizations in Lagos.">
+    <meta property="og:image" content="images/IMG-20260514-WA0004.jpg">
+    <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="images/IMG-20260514-WA0004.jpg" alt="Chamber Logo" class="logo">
+
+        <div>
+            <h1>Lagos Chamber of Commerce</h1>
+            <p>Business Directory</p>
+        </div>
+    </div>
+
+    <nav>
+
+    <button id="menu"></button>
+
+    <ul class="navigation">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="directory.html" class="active">
+            Directory
+        </a></li>
+
+        <li><a href="join.html">Join</a></li>
+
+        <li><a href="discover.html">Discover</a></li>
+
+    </ul>
+
+</nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h2>Member Directory</h2>
+
+        <div class="view-buttons">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+    </section>
+
+    <section id="members" class="grid-view"></section>
+
+</main>
+
+<footer>
+
+    <div class="footer-info">
+        <h3>Lagos Chamber of Commerce</h3>
+        <p>10 Commerce Street, Lagos, Nigeria</p>
+        <p>Email: info@lagoschamber.org</p>
+        <p>Phone: +234 800 000 0000</p>
+    </div>
+
+    <div class="footer-dev">
+        <p>&copy; <span id="year"></span> Your Full Name</p>
+        <p>WDD 231 Project</p>
+        <p id="lastModified"></p>
+    </div>
+
+</footer>
+
+</body>
+</html>
