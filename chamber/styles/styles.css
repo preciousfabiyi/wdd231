@@ -42,6 +42,11 @@ body {
 /* HEADER */
 /* ------------------------------ */
 
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
 header {
     background-color: var(--primary-color);
     color: var(--white);
