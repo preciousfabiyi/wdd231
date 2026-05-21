@@ -1,60 +1,31 @@
 {
-  "members": [
+  "members":[
+
     {
-      "name": "TechNova Solutions",
-      "address": "12 Marina Road, Lagos",
-      "phone": "+234 801 111 1111",
-      "website": "https://technova.com",
-      "image": "business1.webp",
-      "membership": "Gold"
+      "name":"TechNova Solutions",
+      "address":"12 Marina Road",
+      "phone":"+234 800 111 2222",
+      "website":"https://example.com",
+      "image":"images/business1.jpg",
+      "membership":"Gold"
     },
+
     {
-      "name": "GreenLife Foods",
-      "address": "45 Lekki Phase 1",
-      "phone": "+234 802 222 2222",
-      "website": "https://greenlifefoods.com",
-      "image": "business2.webp",
-      "membership": "Silver"
+      "name":"Green Life Foods",
+      "address":"45 Broad Street",
+      "phone":"+234 800 333 4444",
+      "website":"https://example.com",
+      "image":"images/business2.jpg",
+      "membership":"Silver"
     },
+
     {
-      "name": "Prime Bank",
-      "address": "18 Victoria Island",
-      "phone": "+234 803 333 3333",
-      "website": "https://primebank.com",
-      "image": "business3.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "Urban Fashion Hub",
-      "address": "77 Ikeja City Mall",
-      "phone": "+234 804 444 4444",
-      "website": "https://urbanfashion.com",
-      "image": "business4.webp",
-      "membership": "Member"
-    },
-    {
-      "name": "Skyline Travels",
-      "address": "20 Airport Road",
-      "phone": "+234 805 555 5555",
-      "website": "https://skyline.com",
-      "image": "business5.webp",
-      "membership": "Silver"
-    },
-    {
-      "name": "BlueWave Media",
-      "address": "31 Yaba Tech District",
-      "phone": "+234 806 666 6666",
-      "website": "https://bluewave.com",
-      "image": "business6.webp",
-      "membership": "Gold"
-    },
-    {
-      "name": "FreshMart Stores",
-      "address": "10 Surulere Avenue",
-      "phone": "+234 807 777 7777",
-      "website": "https://freshmart.com",
-      "image": "business7.webp",
-      "membership": "Member"
+      "name":"Prime Bank",
+      "address":"20 Victoria Island",
+      "phone":"+234 800 555 6666",
+      "website":"https://example.com",
+      "image":"images/business3.jpg",
+      "membership":"Gold"
     }
   ]
 }
