@@ -26,7 +26,7 @@
   <meta property="og:title" content="Lagos Chamber of Commerce Home Page">
   <meta property="og:description"
     content="Explore business opportunities, local events, weather updates, and featured companies with the Lagos Chamber of Commerce.">
-  <meta property="og:image" content="https://preciousfabiyi.github.io/chamber/images/chamber-social.jpg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&h=630&fit=crop">
   <meta property="og:url" content="https://preciousfabiyi.github.io/chamber/index.html">
   <meta property="og:type" content="website">
 
@@ -49,7 +49,7 @@
   <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
 
   <nav>
-    <ul class="navigation" role="list">
+    <ul class="navigation">
       <li><a href="index.html" class="active" aria-current="page">Home</a></li>
       <li><a href="directory.html">Directory</a></li>
       <li><a href="join.html">Join</a></li>
@@ -123,8 +123,8 @@
         </div>
 
         <div class="forecast-section">
-          <h3>3-Day Forecast</h3>
-          <div id="forecast" aria-label="Three day weather forecast"></div>
+          <h3 id="forecast-heading">3-Day Forecast</h3>
+          <div id="forecast" role="region" aria-labelledby="forecast-heading"></div>
         </div>
       </div>
     </section>
