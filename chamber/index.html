@@ -4,161 +4,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lagos Chamber of Commerce Home Page | Home</title>
+  <title>Lagos Chamber of Commerce | Home</title>
 
   <meta name="description"
-content="Official Lagos Chamber of Commerce website featuring local business events, weather updates, networking opportunities, and company spotlights.">
+    content="Official Lagos Chamber of Commerce website featuring local business events, weather updates, networking opportunities, and company spotlights.">
   <meta name="author" content="Precious Fabiyi">
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- STYLESHEETS -->
   <link rel="stylesheet" href="styles/chamber.css">
   <link rel="stylesheet" href="styles/chamber-large.css">
-  <!-- FAVICON -->
-<link rel="icon" type="image/png" href="images/favicon.png">
-<!-- GOOGLE FONTS -->
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+  <!-- OPEN GRAPH META TAGS -->
+  <meta property="og:title" content="Lagos Chamber of Commerce Home Page">
+  <meta property="og:description"
+    content="Explore business opportunities, local events, weather updates, and featured companies with the Lagos Chamber of Commerce.">
+  <meta property="og:image" content="https://preciousfabiyi.github.io/chamber/images/chamber-social.jpg">
+  <meta property="og:url" content="https://preciousfabiyi.github.io/chamber/index.html">
+  <meta property="og:type" content="website">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-rel="stylesheet">
-<!-- OPEN GRAPH META TAGS -->
-
-<meta property="og:title"
-content="Lagos Chamber of Commerce Home Page">
-
-<meta property="og:description"
-content="Explore business opportunities, local events, weather updates, and featured companies with the Lagos Chamber of Commerce.">
-
-<meta property="og:image"
-content="https://preciousfabiyi.github.io/chamber/images/chamber-social.jpg">
-
-<meta property="og:url"
-content="https://preciousfabiyi.github.io/chamber/index.html">
-<meta property="og:type"
-content="website">
+  <!-- SCRIPTS -->
   <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
 
+<!-- ===================== HEADER ===================== -->
 <header>
-
   <div class="logo">
-    <img src="images/logo.jpg" alt="Chamber Logo">
-    <h1>Chamber of Commerce</h1>
+    <img src="images/logo.jpg" alt="Lagos Chamber of Commerce Logo" width="60" height="60">
+    <div class="logo-text">
+      <h1>Lagos Chamber</h1>
+      <span>of Commerce</span>
+    </div>
   </div>
 
-  <button id="menu"></button>
+  <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
 
   <nav>
-    <ul class="navigation">
-      <li><a href="index.html" class="active">Home</a></li>
+    <ul class="navigation" role="list">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
       <li><a href="directory.html">Directory</a></li>
-      <li><a href="#">Join</a></li>
-      <li><a href="#">Discover</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
     </ul>
   </nav>
-
 </header>
 
+<!-- ===================== MAIN ===================== -->
 <main>
 
-  <!-- HERO -->
-
-  <section class="hero">
-
+  <!-- HERO IMAGE -->
+  <section class="hero" aria-label="Welcome banner">
     <picture>
       <source media="(min-width: 800px)" srcset="images/hero-large.jpg">
-      <img src="images/hero-small.jpg" alt="City Chamber Hero Image">
+      <img src="images/hero-small.jpg" alt="Aerial view of Lagos business district skyline at sunset">
     </picture>
 
     <div class="hero-text">
-      <h2>Welcome to the Chamber of Commerce</h2>
-
-      <a href="#" class="cta-button">
-        Join the Chamber
+      <h2>Welcome to the Lagos Chamber of Commerce</h2>
+      <p class="hero-subtitle">Connecting businesses, driving growth, building community.</p>
+      <!-- CALL TO ACTION -->
+      <a href="join.html" class="cta-button">
+        Join the Chamber Today
       </a>
     </div>
-
   </section>
 
-  <!-- HOME GRID -->
-
+  <!-- HOME GRID: EVENTS + WEATHER -->
   <div class="home-grid">
 
-    <!-- EVENTS -->
+    <!-- CURRENT EVENTS -->
+    <section class="card events-card" aria-labelledby="events-heading">
+      <h2 id="events-heading">📅 Current Events</h2>
 
-    <section class="card">
+      <article class="event-item">
+        <h3>Annual Business Networking Expo</h3>
+        <p class="event-date">Saturday, May 31, 2026 | 9:00 AM – 4:00 PM</p>
+        <p class="event-location">📍 Eko Hotel & Suites, Victoria Island</p>
+        <p>Connect with over 500 business leaders, entrepreneurs, and investors. Keynote by the Governor of Lagos State.</p>
+      </article>
 
-      <h2>Current Events</h2>
+      <article class="event-item">
+        <h3>Entrepreneurship Workshop: Digital Commerce</h3>
+        <p class="event-date">Wednesday, June 4, 2026 | 10:00 AM – 1:00 PM</p>
+        <p class="event-location">📍 Chamber Conference Room, Marina</p>
+        <p>Learn from industry experts how to scale your business using modern e-commerce strategies and digital tools.</p>
+      </article>
 
-      <p>
-        Annual Business Networking Expo this Saturday at the Civic Center.
-      </p>
-
-      <p>
-        Entrepreneurship Workshop next Wednesday at 10:00 AM.
-      </p>
-
+      <article class="event-item">
+        <h3>SME Finance & Investment Forum</h3>
+        <p class="event-date">Friday, June 6, 2026 | 2:00 PM – 5:00 PM</p>
+        <p class="event-location">📍 Landmark Event Centre, Oniru</p>
+        <p>Access funding opportunities and connect with venture capitalists and angel investors focused on Nigerian SMEs.</p>
+      </article>
     </section>
 
     <!-- WEATHER -->
-
-    <section class="card">
-
-      <h2>Weather</h2>
+    <section class="card weather-card" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">🌤 Lagos Weather</h2>
 
       <div id="weather">
+        <div class="weather-current">
+          <p class="weather-temp-label">Current Temperature</p>
+          <p class="weather-temp">
+            <span id="current-temp">Loading...</span>
+          </p>
+          <p id="weather-desc" class="weather-description"></p>
+          <p id="weather-feels" class="weather-detail"></p>
+          <p id="weather-humidity" class="weather-detail"></p>
+        </div>
 
-        <p>
-          Temperature:
-          <span id="current-temp"></span>
-        </p>
-
-        <p id="weather-desc"></p>
-
-        <h3>3-Day Forecast</h3>
-
-        <div id="forecast"></div>
-
+        <div class="forecast-section">
+          <h3>3-Day Forecast</h3>
+          <div id="forecast" aria-label="Three day weather forecast"></div>
+        </div>
       </div>
-
     </section>
 
   </div>
+  <!-- end .home-grid -->
 
-  <!-- SPOTLIGHTS -->
+  <!-- BUSINESS SPOTLIGHTS -->
+  <section class="spotlights" aria-labelledby="spotlights-heading">
+    <h2 id="spotlights-heading">⭐ Business Spotlights</h2>
+    <p class="spotlights-intro">Recognizing our valued Gold and Silver chamber members.</p>
 
-  <section class="spotlights">
-
-    <h2>Business Spotlights</h2>
-
-    <div id="spotlight-container"></div>
-
+    <div id="spotlight-container" role="list" aria-label="Featured business members"></div>
   </section>
 
 </main>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
+  <div class="footer-content">
 
-  <p>
-    Chamber of Commerce
-  </p>
+    <div class="footer-info">
+      <p class="footer-name">Lagos Chamber of Commerce</p>
+      <p>1 Commercial Avenue, Lagos Island, Lagos, Nigeria</p>
+      <p>📞 <a href="tel:+2341234567">+234 (01) 234-5678</a></p>
+      <p>✉ <a href="mailto:info@lagoschamber.ng">info@lagoschamber.ng</a></p>
+    </div>
 
-  <p>
-    Lagos, Nigeria
-  </p>
+    <div class="footer-links">
+      <p><strong>Quick Links</strong></p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </div>
 
-  <p>
-    © <span id="year"></span>
-  </p>
+    <div class="footer-copy">
+      <p>© <span id="year"></span> Lagos Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
 
-  <p id="lastModified"></p>
-
+  </div>
 </footer>
 
 </body>
