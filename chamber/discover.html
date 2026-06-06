@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lagos Chamber of Commerce | Discover Lagos</title>
+
+  <meta name="description"
+    content="Discover the best of Lagos — attractions, culture, markets, beaches, and landmarks that make this city the heart of West Africa.">
+  <meta name="author" content="Precious Fabiyi">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/chamber-large.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  
+  <meta property="og:title" content="Discover Lagos — Lagos Chamber of Commerce">
+  <meta property="og:description"
+    content="Explore the top attractions, landmarks, culture, and experiences Lagos has to offer.">
+  <meta property="og:image" content="https://preciousfabiyi.github.io/wdd231/chamber/images/hero-large.jpg">
+  <meta property="og:url" content="https://preciousfabiyi.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+
+  <!-- type="module" required to use import in discover.js -->
+  <script src="scripts/discover.js" type="module" defer></script>
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="logo">
+    <img src="images/logo.jpg" alt="Lagos Chamber of Commerce Logo" width="60" height="60">
+    <div class="logo-text">
+      <h1>Lagos Chamber</h1>
+      <span>of Commerce</span>
+    </div>
+  </div>
+
+  <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      </li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+  <!-- PAGE BANNER -->
+  <div class="discover-banner">
+    <h2>Discover Lagos</h2>
+    <p>Explore the vibrant culture, landmark attractions, and rich heritage of Nigeria's most dynamic city.</p>
+  </div>
+
+  <!-- VISIT MESSAGE (localStorage) -->
+  <div class="visit-banner" role="status" aria-live="polite">
+    <span class="visit-icon" aria-hidden="true">👋</span>
+    <p id="visit-message"></p>
+  </div>
+
+  <!-- PLACES GRID — cards injected by discover.js -->
+  <section aria-labelledby="places-heading">
+    <h2 id="places-heading" class="sr-only">Places of Interest in Lagos</h2>
+    <div id="places-grid" class="places-grid"></div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-info">
+      <p class="footer-name">Lagos Chamber of Commerce</p>
+      <p>1 Commercial Avenue, Lagos Island, Lagos, Nigeria</p>
+      <p>📞 <a href="tel:+2341234567">+234 (01) 234-5678</a></p>
+      <p>✉ <a href="mailto:info@lagoschamber.ng">info@lagoschamber.ng</a></p>
+    </div>
+
+    <div class="footer-links">
+      <p><strong>Quick Links</strong></p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; <span id="year"></span> Lagos Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

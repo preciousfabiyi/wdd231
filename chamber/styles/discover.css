@@ -1,0 +1,265 @@
+/* =============================================
+   DISCOVER PAGE — discover.css
+   Grid-template-areas: small / medium / large
+   ============================================= */
+
+/* ── Utility ─────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Page banner ─────────────────────────────── */
+.discover-banner {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+}
+
+.discover-banner h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.discover-banner p  { font-size: 0.95rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+
+/* ── Visit message banner ────────────────────── */
+.visit-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  margin: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.visit-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+/* ── Places section wrapper ──────────────────── */
+section[aria-labelledby="places-heading"] {
+  padding: 1rem;
+}
+
+/* =============================================
+   SMALL SCREEN GRID (320px–640px)
+   Single column, all cards stacked
+   Named areas: card1 through card8
+   ============================================= */
+.places-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* Assign grid areas to each card via data-index */
+.place-card[data-index="1"] { grid-area: card1; }
+.place-card[data-index="2"] { grid-area: card2; }
+.place-card[data-index="3"] { grid-area: card3; }
+.place-card[data-index="4"] { grid-area: card4; }
+.place-card[data-index="5"] { grid-area: card5; }
+.place-card[data-index="6"] { grid-area: card6; }
+.place-card[data-index="7"] { grid-area: card7; }
+.place-card[data-index="8"] { grid-area: card8; }
+
+/* ── Place card base styles ──────────────────── */
+.place-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-card h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding: 1rem 1rem 0.4rem;
+}
+
+.place-card figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.place-card figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.place-card address {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 0.4rem 1rem 0;
+}
+
+.place-card p {
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  flex: 1;
+  line-height: 1.55;
+}
+
+.place-card button {
+  margin: 0 1rem 1rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.place-card button:hover { background: var(--primary-light); }
+.place-card button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* =============================================
+   MEDIUM SCREEN GRID (641px–1024px)
+   Asymmetric layout: card1 spans full width,
+   card2+3 side by side, card4 full, etc.
+   ============================================= */
+@media screen and (min-width: 641px) {
+
+  .places-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card6"
+      "card7 card8";
+    gap: 1.25rem;
+    padding: 0;
+  }
+
+  /* Hover effect on images — medium+ only */
+  .place-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .place-card:hover figure img {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.2);
+  }
+
+  /* Full-width cards get a horizontal card layout */
+  .place-card[data-index="1"],
+  .place-card[data-index="6"] {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .place-card[data-index="1"] figure,
+  .place-card[data-index="6"] figure {
+    flex: 0 0 280px;
+  }
+
+  .place-card[data-index="1"] figure img,
+  .place-card[data-index="6"] figure img {
+    height: 100%;
+    min-height: 200px;
+  }
+
+  .place-card[data-index="1"] .card-body,
+  .place-card[data-index="6"] .card-body {
+    flex: 1;
+  }
+
+}
+
+/* =============================================
+   LARGE SCREEN GRID (1025px+)
+   Complex named-area layout: featured card top-left
+   spans 2 rows, varied sizing throughout
+   ============================================= */
+@media screen and (min-width: 1025px) {
+
+  section[aria-labelledby="places-heading"] {
+    padding: 1.5rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .places-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.5rem;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card1 card4 card5"
+      "card6 card6 card7"
+      "card8 card8 card7";
+  }
+
+  /* card1 spans 2 rows — featured hero card */
+  .place-card[data-index="1"] {
+    flex-direction: column;
+  }
+
+  .place-card[data-index="1"] figure img {
+    height: 280px;
+  }
+
+  /* card6 and card8 span 2 columns — wide highlight cards */
+  .place-card[data-index="6"],
+  .place-card[data-index="8"] {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .place-card[data-index="6"] figure,
+  .place-card[data-index="8"] figure {
+    flex: 0 0 300px;
+  }
+
+  .place-card[data-index="6"] figure img,
+  .place-card[data-index="8"] figure img {
+    height: 100%;
+    min-height: 200px;
+  }
+
+  /* card7 spans 2 rows — tall right-column card */
+  .place-card[data-index="7"] {
+    flex-direction: column;
+  }
+
+  .place-card[data-index="7"] figure img {
+    height: 260px;
+  }
+
+  .visit-banner {
+    margin: 1rem 2rem;
+  }
+
+}
