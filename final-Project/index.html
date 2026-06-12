@@ -1,0 +1,199 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fife Beauty Hub &amp; Spa — Premium Skincare &amp; Wellness in Ilorin, Nigeria</title>
+  <meta name="description" content="Shop premium beauty products and book spa services at Fife Beauty Hub & Spa. Facials, pedicures, skincare, and more in Ilorin, Nigeria.">
+  <meta name="author" content="Precious Fabiyi">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fife Beauty Hub & Spa">
+  <meta property="og:description" content="Premium beauty products and spa services in Ilorin, Nigeria.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://preciousfabiyi.github.io/wdd231/final/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo-link" aria-label="Fife Beauty Hub home">
+      <div class="logo-text">
+        <span class="logo-main">Fife Beauty Hub</span>
+        <span class="logo-sub">& Spa — Ilorin</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome to Fife Beauty Hub">
+      <div class="hero-content">
+        <span class="hero-tag">Premium Beauty &amp; Wellness</span>
+        <h1>Glow Naturally,<br><em>With Confidence</em></h1>
+        <p>Luxury skincare products and professional spa services tailored for every skin type in Ilorin, Nigeria.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary">Shop Products</a>
+          <a href="contact.html" class="btn btn-outline">Book Appointment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title" id="services-heading">Our <em>Services</em></h2>
+        <p class="section-sub">Professional treatments designed to restore, refresh, and celebrate your natural beauty.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"></div>
+          <h3 class="service-title">Luxury Facial</h3>
+          <p class="service-desc">Deep cleansing, exfoliation, and hydration facial tailored to your specific skin type and concerns.</p>
+          <p class="service-price">From ₦8,500 · 60 min</p>
+        </article>
+        <article class="service-card featured">
+          <div class="service-icon" aria-hidden="true"></div>
+          <h3 class="service-title">Spa Pedicure</h3>
+          <p class="service-desc">Relaxing foot soak, full exfoliation, nail shaping, and polish for salon-quality beautiful feet.</p>
+          <p class="service-price">From ₦5,500 · 45 min</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"></div>
+          <h3 class="service-title">Skin Consultation</h3>
+          <p class="service-desc">One-on-one personalised skin analysis and custom routine recommendation from our expert team.</p>
+          <p class="service-price">From ₦3,000 · 30 min</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section bg-cream-mid" id="products" aria-labelledby="products-heading">
+      <div class="section-header">
+        <span class="section-label">Shop</span>
+        <h2 class="section-title" id="products-heading">Beauty <em>Products</em></h2>
+        <p class="section-sub">Curated skincare, body care, and wellness essentials for your daily routine.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="products-controls" role="search" aria-label="Search and filter products">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          <label for="product-search" class="skip-link">Search products</label>
+          <input type="search" id="product-search" placeholder="Search products…" autocomplete="off" aria-label="Search products">
+        </div>
+        <div class="filter-btns" id="filter-btns" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-cat="All">All</button>
+        </div>
+        <label for="sort-select" class="skip-link">Sort products</label>
+        <select id="sort-select" aria-label="Sort products">
+          <option value="default">Newest First</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="products-grid" id="products-grid" aria-label="Products list"></div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="section-header">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title" id="testimonials-heading">What Clients <em>Say</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="t-text">"My skin has never felt this radiant. The Rose Glow Serum changed my routine completely!"</p>
+          <div class="t-author"><div class="t-avatar" aria-hidden="true">A</div><span class="t-name">Adaeze O.</span></div>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="t-text">"The luxury pedicure was absolutely heavenly. Professional staff and beautiful atmosphere."</p>
+          <div class="t-author"><div class="t-avatar" aria-hidden="true">F</div><span class="t-name">Fatima B.</span></div>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="t-text">"Best skincare consultation I've had. The personalized routine has made such a difference."</p>
+          <div class="t-author"><div class="t-avatar" aria-hidden="true">C</div><span class="t-name">Chisom N.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA / NEWSLETTER -->
+    <section class="cta-section" aria-labelledby="newsletter-heading">
+      <span class="section-label" style="color:var(--rose-soft)">Stay Updated</span>
+      <h2 class="section-title" id="newsletter-heading">Join Our <em style="color:var(--rose-soft)">Beauty Community</em></h2>
+      <p class="section-sub">Get exclusive offers, skincare tips, and new product alerts delivered to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <label for="newsletter-email" class="skip-link">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required autocomplete="email">
+        <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+      </form>
+      <p class="newsletter-msg" id="newsletter-msg" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" aria-hidden="true">
+      <button class="modal-close" aria-label="Close product details">&times;</button>
+      <img class="modal-img" src="" alt="" loading="lazy" width="560" height="240">
+      <div class="modal-body">
+        <p class="modal-cat"></p>
+        <h2 class="modal-name" id="modal-title"></h2>
+        <p class="modal-desc"></p>
+        <div class="modal-benefits" aria-label="Product benefits"></div>
+        <div class="modal-footer-row">
+          <span class="modal-price"></span>
+          <span class="modal-rating-text"></span>
+        </div>
+        <button class="btn btn-primary modal-add-btn" style="width:100%;justify-content:center;margin-top:18px;">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand"> Fife Beauty Hub &amp; Spa</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Video demonstration (opens in new tab)">▶ Video Demo</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Fife Beauty Hub &amp; Spa · Ilorin, Nigeria</p>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
