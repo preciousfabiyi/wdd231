@@ -7,7 +7,7 @@
   <meta name="description" content="Shop premium beauty products and book spa services at Fife Beauty Hub & Spa. Facials, pedicures, skincare, and more in Ilorin, Nigeria.">
   <meta name="author" content="Precious Fabiyi">
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <!-- Open Graph -->
   <meta property="og:title" content="Fife Beauty Hub & Spa — Premium Skincare in Nigeria">
   <meta property="og:description" content="Shop luxury skincare products and book professional spa services at Fife Beauty Hub & Spa in Ilorin, Nigeria. Facials, pedicures, and more.">
@@ -20,7 +20,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/larger.css"
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -52,7 +51,7 @@
         <h1>Glow Naturally,<br><em>With Confidence</em></h1>
         <p>Luxury skincare products and professional spa services tailored for every skin type in Ilorin, Nigeria.</p>
         <div class="hero-btns">
-          <a href="scripts/products.js" class="btn btn-primary">Shop Products</a>
+          <a href="#products" class="btn btn-primary">Shop Products</a>
           <a href="contact.html" class="btn btn-outline">Book Appointment</a>
         </div>
       </div>
@@ -116,7 +115,7 @@
       </div>
 
       <p class="result-count" id="result-count" aria-live="polite"></p>
-      <div class="products-grid" id="products-grid" aria-label="Products list"></div>
+      <div class="products-grid" id="products-grid" role="region" aria-label="Products list"></div>
     </section>
 
     <!-- TESTIMONIALS -->
@@ -127,17 +126,20 @@
       </div>
       <div class="testimonials-grid">
         <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <h3 class="sr-only">Testimonial from Adaeze O.</h3>
+          <div class="t-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">"My skin has never felt this radiant. The Rose Glow Serum changed my routine completely!"</p>
           <div class="t-author"><div class="t-avatar" aria-hidden="true">A</div><span class="t-name">Adaeze O.</span></div>
         </article>
         <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <h3 class="sr-only">Testimonial from Fatima B.</h3>
+          <div class="t-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">"The luxury pedicure was absolutely heavenly. Professional staff and beautiful atmosphere."</p>
           <div class="t-author"><div class="t-avatar" aria-hidden="true">F</div><span class="t-name">Fatima B.</span></div>
         </article>
         <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <h3 class="sr-only">Testimonial from Chisom N.</h3>
+          <div class="t-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">"Best skincare consultation I've had. The personalized routine has made such a difference."</p>
           <div class="t-author"><div class="t-avatar" aria-hidden="true">C</div><span class="t-name">Chisom N.</span></div>
         </article>
@@ -163,12 +165,12 @@
   <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal" aria-hidden="true">
       <button class="modal-close" aria-label="Close product details">&times;</button>
-      <img class="modal-img" src="" alt="" loading="lazy" width="560" height="240">
+      <img class="modal-img" src="images/placeholder.jpg" alt="Product image" loading="lazy" width="560" height="240">
       <div class="modal-body">
         <p class="modal-cat"></p>
-        <h2 class="modal-name" id="modal-title"></h2>
+        <h2 class="modal-name" id="modal-title">Product Details</h2>
         <p class="modal-desc"></p>
-        <div class="modal-benefits" aria-label="Product benefits"></div>
+        <div class="modal-benefits" role="group" aria-label="Product benefits"></div>
         <div class="modal-footer-row">
           <span class="modal-price"></span>
           <span class="modal-rating-text"></span>
@@ -194,7 +196,7 @@
     </div>
   </footer>
 
-  <script type="module" src="scripts/main.js"></script>
-  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="scripts/main.js" defer></script>
+  
 </body>
 </html>

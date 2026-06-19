@@ -265,3 +265,14 @@ footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,.06); p
 /* FORM VALIDATION ERRORS */
 .input-error { border-color: #c0392b !important; background: #fff8f8 !important; }
 .field-error { display: block; color: #c0392b; font-size: .78rem; font-weight: 600; margin-top: 5px; }
+
+/* SCREEN-READER ONLY (visually hidden but accessible) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
